@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }} - Kraken Financial Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%); /* Deep blue to lighter blue */
+        }
+        .kraken-image-container {
+            max-width: 200px; /* Adjust as needed */
+            margin: 0 auto; /* Center the image */
+        }
+        .section-accent {
+            border-left: 4px solid #2563EB; /* Blue accent */
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-700">
+                Kraken<span class="text-blue-500">Financial</span>
+            </a>
+            <div>
+                <a href="/" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                <a href="{{ url_for('secure_command_demo') }}" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Tool Demo</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium cta-button">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <div class="kraken-image-container mb-8">
+                <img src="{{ url_for('static', filename='images/sysdig_kraken.webp') }}" alt="Kraken Hunter - Security Solutions" class="w-full h-auto rounded-lg">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Navigate Complexity, Secure Your Future.</h1>
+            <p class="text-lg md:text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                Advanced security insights and robust financial technology solutions designed to protect your assets and empower your growth in an ever-evolving digital landscape.
+            </p>
+            <a href="#services" class="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 cta-button text-lg">
+                Discover Our Solutions
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-800">About KrakenFinancial</h2>
+            <p class="text-center text-blue-600 font-semibold mb-12">Guarding Your Digital Seas</p>
+            <div class="flex flex-wrap -mx-4 items-center">
+                <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Modern+Office+Vibe" alt="Our Team" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="w-full md:w-1/2 px-4">
+                    <div class="section-accent pl-4 mb-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Our Mission</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            At KrakenFinancial, we provide cutting-edge, AI-driven security and financial technology to safeguard institutions against emerging threats. We empower our clients with the tools and intelligence needed to thrive securely and confidently.
+                        </p>
+                    </div>
+                    <div class="section-accent pl-4">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Our Vision</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            To be the leading partner for financial institutions globally, recognized for our unwavering commitment to security, innovation, and client success in the complex digital ecosystem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-800">Our Core Services</h2>
+            <p class="text-center text-blue-600 font-semibold mb-12">Comprehensive Protection, Tailored For You</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.471A10.016 10.016 0 112.382 8.382A10.016 10.016 0 0117.618 3.529z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Threat Intelligence</h3>
+                    <p class="text-gray-600">Proactive identification and mitigation of cyber threats using advanced analytics and global threat data feeds.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Secure Infrastructure</h3>
+                    <p class="text-gray-600">Design and implementation of resilient and secure IT infrastructures compliant with financial industry standards.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <svg class="w-12 h-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">FinTech Solutions</h3>
+                    <p class="text-gray-600">Development of bespoke financial technology applications focusing on security, efficiency, and innovation.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                 <a href="{{ url_for('secure_command_demo') }}" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 cta-button text-lg">
+                    Explore Secure Tool Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-blue-700 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Get In Touch</h2>
+            <form class="max-w-xl mx-auto bg-white text-gray-800 p-8 rounded-lg shadow-2xl">
+                <div class="mb-6">
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" name="name" id="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="John Doe">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" name="email" id="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="you@example.com">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                    <textarea name="message" id="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="How can we help you?"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md cta-button text-lg w-full md:w-auto">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="currentYear"></span> KrakenFinancial Solutions. All rights reserved.</p>
+            <p class="text-sm mt-2">Innovating Security for a Digital Age.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
